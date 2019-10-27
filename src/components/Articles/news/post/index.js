@@ -4,13 +4,12 @@ import { URL} from '../../../../config';
 
 import styles from '../../../Articles/articles.css'
 import Header from './header';
-import Body from '../post/body'
 
 class NewsArticles extends Component {
 
   state={
-    articles:[],
-    team:[]
+    article:[],
+    team:[],
   }
   
   componentWillMount(){
@@ -39,7 +38,17 @@ class NewsArticles extends Component {
            date={article.date}
            author={article.author}
         />
-        <Body/>
+        <div className={styles.articleBody}>
+           <h1>{article.title}</h1>
+           <div className={styles.articleImage}
+                style={{
+                    background:`url('/images/articles/${article.image}')`
+                }}
+           ></div>
+           <div className={styles.articleText}>
+              {article.body}
+           </div>
+        </div>
 
       </div>
     );

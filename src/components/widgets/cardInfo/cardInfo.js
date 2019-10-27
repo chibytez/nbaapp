@@ -15,7 +15,7 @@ if(data){
   return (
     <div className={styles.cardInfo}>
 <span className={styles.teamName}>
-{teamName(props.teams,props.team)}
+{teamName(props.teams, props.team)}
 
   </span> 
   <span className={styles.date}>
