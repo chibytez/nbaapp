@@ -23,8 +23,7 @@ class NewsArticles extends Component {
           article,
           team:response.data
         })
-      })
-      
+      })     
     })
   }
   render() {
